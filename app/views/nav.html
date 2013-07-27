@@ -1,7 +1,26 @@
 <div class="span3">
-  <ul class="nav nav-tabs nav-stacked">
-    <li ng-repeat="beat in beats">
+  <ul class="nav nav-pills nav-stacked">
+    <li ng-repeat="beat in beats" ng-class="{ active: isSelected( $index ) }">
       <a href="#/beat/{{ beat.id }}">{{ beat.title }}</a>
     </li>
   </ul>
+
+  <table class="table table-bordered table-hover">
+    <tbody>
+      <tr>
+        <td><strong>Ctrl + <i class="icon-arrow-up"></i></strong></td>
+        <td>Previous beat</td>
+      </tr>
+
+      <tr>
+        <td><strong>Ctrl + <i class="icon-arrow-down"></i></strong></td>
+        <td>Next beat</td>
+      </tr>
+
+      <tr>
+        <td><strong>ESC</strong></td>
+        <td>Home</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
