@@ -1,9 +1,15 @@
-<div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
+<div class="span2">
+  <ul class="nav nav-tabs nav-stacked">
+    <li ng-repeat="beat in beats">
+      <a>{{ beat.title }}</a>
+    </li>
   </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+</div>
+
+<div class="span9 offset3">
+  <div class="section" ng-repeat="beat in beats">
+    <h2>{{ beat.title }}</h2>
+    <p>{{ beat.description }}</p>
+    <textarea ng-model="text[ beat.id ]"></textarea>
+  </div>
 </div>
