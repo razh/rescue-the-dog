@@ -27,3 +27,13 @@ textarea {
 .pager {
   @include user-select(none);
 }
+
+.main-container {
+  margin-top: 40px;
+}
+
+@media (max-width:768px) {
+  .desktop {
+    display: none;
+  }
+}

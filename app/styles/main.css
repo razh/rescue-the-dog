@@ -5837,3 +5837,10 @@ textarea {
   -khtml-user-select: none;
   -moz-user-select: none;
   user-select: none; }
+
+.main-container {
+  margin-top: 40px; }
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none; } }
