@@ -50,6 +50,9 @@ angular.module( 'rescueTheDogApp' )
       return $scope.selected.index + distance;
     };
 
+    $scope.prev = function() { return $scope.jump(-1); };
+    $scope.next = function() { return $scope.jump(1); };
+
     // This needs to be cleaned up.
     function onKeyDown( event ) {
       if ( event.ctrlKey ) {
@@ -68,10 +71,10 @@ angular.module( 'rescueTheDogApp' )
             }
           } else if ( event.which === 38 ) {
             // CTRL + UP.
-            $scope.select( $scope.jump(-1) );
+            $scope.select( $scope.prev() );
           } else if ( event.which === 40 ) {
             // CTRL + DOWN.
-            $scope.select( $scope.jump(1) );
+            $scope.select( $scope.next() );
           }
 
           $scope.$apply();
