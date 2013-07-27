@@ -2,6 +2,16 @@
   <a href="#/"><h5>Home</h5></a>
 
   <h2>{{ selected.beat.title }}</h2>
-  <p>{{ selected.beat.description }}</p>
   <textarea autofocus ng-model="text[ selected.beat.id ]"></textarea>
+
+  <ul class="pager">
+    <li class="previous" ng-class="{ 'disabled': isStart( selected.index ) }">
+      <a ng-click="select( prev() )">&larr; Older</a>
+    </li>
+    <li class="next" ng-class="{ 'disabled': isEnd( selected.index ) }">
+      <a ng-click="select( next() )">Newer &rarr;</a>
+    </li>
+  </ul>
+
+  <p>{{ selected.beat.description }}</p>
 </div>

@@ -16,3 +16,14 @@ textarea {
   min-height: 480px;
   height: 100%;
 }
+
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+   -khtml-user-select: $select;
+     -moz-user-select: $select;
+          user-select: $select;
+}
+
+.pager {
+  @include user-select(none);
+}

@@ -23,21 +23,31 @@ angular.module( 'rescueTheDogApp' )
       return index === $scope.selected.index;
     };
 
-    // Handle jumping from beat to beat with key commands.
-    $scope.jumpId = function( distance ) {
-      var length = $scope.beats.length,
-          index = $scope.selected.index || 0,
-          newIndex = Math.min( Math.max( 0, index + distance ), length - 1 );
-
-      return $scope.beats[ newIndex ].id;
+    $scope.select = function( index ) {
+      index = Math.min( Math.max( index, 0 ), $scope.beats.length - 1 );
+      $location.path( '/beat/' + $scope.beats[ index ].id );
     };
 
-    $scope.prevId = function() {
-      return $scope.jumpId(-1);
+    /**
+     * Check if index is at start (index is 0).
+     */
+    $scope.isStart = function( index ) {
+      return index === 0;
     };
 
-    $scope.nextId = function() {
-      return $scope.jumpId(1);
+    /**
+     * Check if index is at end (index is length - 1).
+     */
+    $scope.isEnd = function( index ) {
+      return index === $scope.beats.length - 1;
+    };
+
+
+    /**
+     * Get the index of the beat at distance away from the current beat.
+     */
+    $scope.jump = function( distance ) {
+      return $scope.selected.index + distance;
     };
 
     // This needs to be cleaned up.
@@ -58,10 +68,10 @@ angular.module( 'rescueTheDogApp' )
             }
           } else if ( event.which === 38 ) {
             // CTRL + UP.
-            $location.path( '/beat/' + $scope.prevId() );
+            $scope.select( $scope.jump(-1) );
           } else if ( event.which === 40 ) {
             // CTRL + DOWN.
-            $location.path( '/beat/' + $scope.nextId() );
+            $scope.select( $scope.jump(1) );
           }
 
           $scope.$apply();
