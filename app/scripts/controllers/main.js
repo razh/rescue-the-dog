@@ -2,6 +2,10 @@
 
 angular.module( 'rescueTheDogApp' )
   .controller( 'MainCtrl', function( $scope, $http ) {
+    $scope.selected = {
+      beat: null
+    };
+
     $scope.text = {};
 
     $scope.getBeats = function() {

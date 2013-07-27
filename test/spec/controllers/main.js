@@ -10,7 +10,6 @@ describe( 'Controller: MainCtrl', function() {
   // Initialize the controller and a mock scope
   beforeEach( inject( function( $controller, $rootScope, $httpBackend ) {
     scope = $rootScope.$new();
-
     httpBackend = $httpBackend;
 
     createController = function() {
