@@ -10,6 +10,9 @@ angular.module( 'rescueTheDogApp', [] )
         templateUrl: 'views/beat.html',
         controller: 'BeatCtrl'
       })
+      .when( '/preview', {
+        templateUrl: 'views/preview.html'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -26,11 +26,15 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner"></div>
+    </div>
+
     <div class="container" ng-controller="MainCtrl">
-        <div class="row">
-            <div ng-include src=" 'views/nav.html' "></div>
-            <div ng-view=""></div>
-        </div>
+      <div class="row">
+        <div ng-include src=" 'views/nav.html' "></div>
+        <div ng-view=""></div>
+      </div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -71,5 +75,5 @@
         <script src="./scripts/controllers/main.js"></script>
         <script src="scripts/controllers/beat.js"></script>
         <!-- endbuild -->
-</body>
+  </body>
 </html>

@@ -40,18 +40,27 @@ angular.module( 'rescueTheDogApp' )
       return $scope.jumpId(1);
     };
 
+    // This needs to be cleaned up.
     function onKeyDown( event ) {
       if ( event.ctrlKey ) {
-        if ( event.which === 38 ||
+        if ( event.which === 32 ||
+             event.which === 38 ||
              event.which === 40 ) {
           event.preventDefault();
 
-          // CTRL + UP.
-          if ( event.which === 38 ) {
+
+          if ( event.which === 32 ) {
+            // Go back if we're already previewing.
+            if ( $location.path() === '/preview' ) {
+              $window.history.back();
+            } else {
+              $location.path( '/preview' );
+            }
+          } else if ( event.which === 38 ) {
+            // CTRL + UP.
             $location.path( '/beat/' + $scope.prevId() );
-          }
-          // CTRL + DOWN.
-          else if ( event.which === 40 ) {
+          } else if ( event.which === 40 ) {
+            // CTRL + DOWN.
             $location.path( '/beat/' + $scope.nextId() );
           }
 
