@@ -32,46 +32,46 @@
   {
     "id": "b-story",
     "title": "B Story",
-    "description": ""
+    "description": "Love story."
   },
   {
     "id": "fun-and-games",
     "title": "Fun and Games",
-    "description": ""
+    "description": "What the premise promises. Trailer moments. Training montages."
   },
   {
     "id": "midpoint",
     "title": "Midpoint",
-    "description": ""
+    "description": "False defeat or false victory."
   },
   {
     "id": "bad-guys-close-in",
     "title": "Bad Guys Close In",
-    "description": ""
+    "description": "The bad guys regroup."
   },
   {
     "id": "all-is-lost",
     "title": "All Is Lost",
-    "description": ""
+    "description": "The hero appears to be defeated."
   },
   {
     "id": "dark-night-of-the-soul",
     "title": "Dark Night of the Soul",
-    "description": ""
+    "description": "Soul-searching. The darkness before the dawn."
   },
   {
     "id": "break-into-three",
     "title": "Break into Three",
-    "description": ""
+    "description": "A solution is found!"
   },
   {
     "id": "finale",
     "title": "Finale",
-    "description": ""
+    "description": "Apply the lessons learned. Character quirks become sources of strength. Defeat the bad guys."
   },
   {
     "id": "final-image",
     "title": "Final Image",
-    "description": ""
+    "description": "The opposite of the opening image. Character growth."
   }
 ]
